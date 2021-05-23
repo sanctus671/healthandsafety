@@ -54,7 +54,7 @@ var BookPageModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [ngClass]=\"{'transparent-header': book.started}\">\n    <ion-toolbar color=\"primary\">\n        <ion-title *ngIf=\"!book.started\">{{book.title}}</ion-title>\n        \n    \n    <ion-buttons slot=\"start\">\n        <ion-button [color]=\"book.started ? 'primary' : 'light'\">\n            <ion-back-button defaultHref=\"/home\"></ion-back-button>\n        </ion-button>            \n    </ion-buttons>          \n        \n        \n    </ion-toolbar>\n    \n    \n    \n</ion-header>\n\n<ion-content class=\"book\">\n    \n    <div class=\"book__loading\" *ngIf=\"loading\">\n        <ion-spinner color='primary'></ion-spinner>\n    </div> \n\n    <div class=\"book__cover\" *ngIf=\"!book.started\">\n        <div class=\"book__cover__image\">\n            <img [src]=\"book.cover_image\" />\n        </div>\n\n        <div class=\"book__cover__blurb\">\n            {{book.blurb}}\n        </div>\n    </div>\n    \n    <div  *ngIf=\"book.started\">\n        <div *ngFor=\"let page of book.pages;let i = index;\">\n            <div class=\"book__page\" *ngIf=\"currentPage === i;\">\n\n                <div class=\"book__page__image\">\n                    <img [src]=\"page.image\" />\n                    \n                    \n                    <div class=\"book__page__image__tip\" [ngStyle]=\"getTipPosition(page.tip_position)\" *ngIf=\"page.tip\" (click)=\"openTip(page.tip)\">\n                        Tap here!\n                    </div>\n                    \n                    \n                </div>        \n\n                <div class=\"book__page__text\">\n                    <p class=\"book__page__maori\">{{page.maori_text}}</p>\n                    <p class=\"book__page__english\">{{page.english_text}}</p>\n                    \n                   \n                    \n                    \n                    \n                </div>      \n\n                <div class=\"book__page__audio\">\n                    <ion-icon color=\"primary\" name=\"play\" *ngIf=\"!audioPlaying\" (click)=\"playAudio()\"></ion-icon>\n                    <ion-icon color=\"primary\" name=\"pause\" *ngIf=\"audioPlaying\" (click)=\"pauseAudio()\"></ion-icon>\n                </div>  \n\n                <div class=\"book__page__navigation\">\n                    <ion-button color='primary' *ngIf=\"currentPage > 0\" (click)=\"previousPage()\" [disabled]=\"audioPlaying\">\n                        <ion-icon name=\"arrow-back\"></ion-icon>\n                        &nbsp;&nbsp;Previous Page\n                    </ion-button>              \n                    <ion-button color='primary' *ngIf=\"currentPage < (book.pages.length - 1)\" (click)=\"nextPage()\" [disabled]=\"audioPlaying\">\n                        Next Page&nbsp;&nbsp;\n                        <ion-icon name=\"arrow-forward\"></ion-icon>\n                    </ion-button>   \n                    \n                    <ion-button color='primary' *ngIf=\"currentPage >= (book.pages.length - 1)\" (click)=\"closeBook()\" [disabled]=\"audioPlaying\">\n                        Close Book\n                    </ion-button>                     \n                    \n                </div>\n\n            </div>\n        </div>\n    </div>\n    \n    <div *ngIf=\"!loading && book.pages.length > 0\">\n            <audio *ngFor=\"let page of book.pages;let i = index\" id=\"pageaudio{{i}}\">\n              <source [src]=\"page.audio\">\n            </audio>    \n    </div>\n\n</ion-content>\n\n\n\n<ion-footer class=\"book-footer\" *ngIf=\"!loading\">\n\n    <ion-button color='primary' expand=\"full\" class=\"book-footer__button\" *ngIf=\"!book.started\" (click)=\"startReading()\">\n        Start Reading&nbsp;&nbsp;\n        <ion-icon name=\"arrow-forward\"></ion-icon>\n    </ion-button>\n   \n    \n</ion-footer>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [ngClass]=\"{'transparent-header': book.started}\">\n    <ion-toolbar color=\"primary\">\n        <ion-title *ngIf=\"!book.started\">{{book.title}}</ion-title>\n        \n    \n    <ion-buttons slot=\"start\">\n        <ion-button [color]=\"book.started ? 'primary' : 'light'\">\n            <ion-back-button defaultHref=\"/home\"></ion-back-button>\n        </ion-button>            \n    </ion-buttons>          \n        \n        \n    </ion-toolbar>\n    \n    \n    \n</ion-header>\n\n<ion-content class=\"book\">\n    \n    <div class=\"book__loading\" *ngIf=\"loading\">\n        <ion-spinner color='primary'></ion-spinner>\n    </div> \n\n    <div class=\"book__cover\" *ngIf=\"!book.started\">\n        <div class=\"book__cover__image\">\n            <img [src]=\"book.cover_image\" />\n        </div>\n\n        <div class=\"book__cover__blurb\">\n            {{book.blurb}}\n        </div>\n    </div>\n    \n    <div  *ngIf=\"book.started\">\n        <div *ngFor=\"let page of book.pages;let i = index;\">\n            <div class=\"book__page\" *ngIf=\"currentPage === i;\">\n\n                <div class=\"book__page__image\">\n                    <img [src]=\"page.image\" />\n                    \n                    \n                    <div class=\"book__page__image__tip\" [ngStyle]=\"getTipPosition(page.tip_position)\" *ngIf=\"page.tip\" (click)=\"openTip(page.tip)\">\n                        Tap here!\n                    </div>\n                    \n                    \n                </div>        \n\n                <div class=\"book__page__text\">\n                    <p class=\"book__page__maori\">{{page.maori_text}}</p>\n                    <p class=\"book__page__english\">{{page.english_text}}</p>\n                    \n                   \n                    \n                    \n                    \n                </div>      \n\n                <div class=\"book__page__audio\">\n                    <ion-icon color=\"primary\" name=\"play\" *ngIf=\"!audioPlaying\" (click)=\"playAudio()\"></ion-icon>\n                    <ion-icon color=\"primary\" name=\"pause\" *ngIf=\"audioPlaying\" (click)=\"pauseAudio()\"></ion-icon>\n                </div>  \n\n                <div class=\"book__page__navigation\">\n                    <ion-button color='primary' *ngIf=\"currentPage > 0\" (click)=\"previousPage()\" [disabled]=\"audioPlaying\">\n                        <ion-icon name=\"arrow-back\"></ion-icon>\n                        &nbsp;&nbsp;Previous Page\n                    </ion-button>              \n                    <ion-button color='primary' *ngIf=\"currentPage < (book.pages.length - 1)\" (click)=\"nextPage()\" [disabled]=\"audioPlaying\">\n                        Next Page&nbsp;&nbsp;\n                        <ion-icon name=\"arrow-forward\"></ion-icon>\n                    </ion-button>   \n                    \n                    <ion-button color='primary' *ngIf=\"currentPage >= (book.pages.length - 1)\" (click)=\"closeBook()\" [disabled]=\"audioPlaying\">\n                        Close Book\n                    </ion-button>                     \n                    \n                </div>\n\n            </div>\n        </div>\n    </div>\n    \n    <div *ngIf=\"!loading && book.pages.length > 0\">\n            <audio *ngFor=\"let page of book.pages;let i = index\" id=\"pageaudio{{i}}\">\n              <source [src]=\"page.audio\" type=\"audio/mpeg\">\n            </audio>    \n    </div>\n\n</ion-content>\n\n\n\n<ion-footer class=\"book-footer\" *ngIf=\"!loading\">\n\n    <ion-button color='primary' expand=\"full\" class=\"book-footer__button\" *ngIf=\"!book.started\" (click)=\"startReading()\">\n        Start Reading&nbsp;&nbsp;\n        <ion-icon name=\"arrow-forward\"></ion-icon>\n    </ion-button>\n   \n    \n</ion-footer>");
 
 /***/ }),
 
@@ -85,11 +85,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var BookPage = /** @class */ (function () {
-    function BookPage(bookService, route, alertCtrl, location) {
+    function BookPage(bookService, route, alertCtrl, location, platform) {
         this.bookService = bookService;
         this.route = route;
         this.alertCtrl = alertCtrl;
         this.location = location;
+        this.platform = platform;
         this.loading = true;
         var bookId = this.route.snapshot.params['id'];
         this.book = { id: bookId, pages: [] };
@@ -109,12 +110,17 @@ var BookPage = /** @class */ (function () {
     };
     BookPage.prototype.startReading = function () {
         this.currentPage = 0;
-        this.playAudio();
+        if (!this.platform.is("ios")) {
+            //autoplay disabled for ios
+            this.playAudio();
+        }
         this.book.started = true;
     };
     BookPage.prototype.nextPage = function () {
         this.currentPage += 1;
-        this.playAudio();
+        if (!this.platform.is("ios")) {
+            this.playAudio();
+        }
     };
     BookPage.prototype.previousPage = function () {
         this.currentPage -= 1;
@@ -160,7 +166,8 @@ var BookPage = /** @class */ (function () {
         { type: _services_book_book_service__WEBPACK_IMPORTED_MODULE_6__["BookService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
         { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["AlertController"] },
-        { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"] }
+        { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"] },
+        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["Platform"] }
     ]; };
     BookPage.propDecorators = {
         audio: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"], args: ['audioPlayer',] }]
