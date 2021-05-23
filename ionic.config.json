@@ -1,0 +1,7 @@
+{
+  "name": "healthandsafety",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

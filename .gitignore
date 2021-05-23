@@ -1,0 +1,8 @@
+/src
+/e2e
+/node_modules
+/platforms
+/.browserslistrc
+/.editorconfig
+/.eslintrc.json
+/karma.conf.js

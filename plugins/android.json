@@ -1,0 +1,39 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.healthandsafetystories.app"
+    },
+    "cordova-plugin-inapppurchase": {
+      "PACKAGE_NAME": "com.healthandsafetystories.app"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.healthandsafetystories.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.healthandsafetystories.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.healthandsafetystories.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.healthandsafetystories.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.healthandsafetystories.app"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.healthandsafetystories.app"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.healthandsafetystories.app"
+    }
+  },
+  "dependent_plugins": {}
+}
